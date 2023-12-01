@@ -1,0 +1,42 @@
+<div class="signup-container">
+    <form class="signup-form" (ngSubmit)="onSignUp()" #signupForm="ngForm">
+        <h2>Sign Up</h2>
+        <div class="form-group">
+            <label for="username" class="top-label">Username</label>
+            <input type="text" id="username" name="username" [(ngModel)]="user.username" required #username="ngModel">
+            <div *ngIf="username.invalid && (username.dirty || username.touched)" class="error-message">
+                Username is required
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="top-label">Password</label>
+            <input type="password" id="password" name="password" [(ngModel)]="user.password" required #password="ngModel">
+            <div *ngIf="password.invalid && (password.dirty || password.touched)" class="error-message">
+                Password is required
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email" class="top-label">Email</label>
+            <input type="email" id="email" name="email" [(ngModel)]="user.email" required #email="ngModel">
+            <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error-message">
+                Please enter a valid email
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="mobile" class="top-label">Mobile Number</label>
+            <input type="tel" id="mobile" name="mobile" [(ngModel)]="user.mobile_no" required #mobile="ngModel">
+            <div *ngIf="mobile.invalid && (mobile.dirty || mobile.touched)" class="error-message">
+                Mobile number is required
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="dob" class="top-label">Date of Birth</label>
+            <input type="date" id="dob" name="dob" [(ngModel)]="user.dob" required #dob="ngModel">
+            <div *ngIf="dob.invalid && (dob.dirty || dob.touched)" class="error-message">
+                Date of birth is required
+            </div>
+        </div>
+        <button type="submit" [disabled]="!signupForm.form.valid">Sign Up</button>
+        <p>Already have an account? <a routerLink="/login">Login here</a></p>
+    </form>
+  </div>
