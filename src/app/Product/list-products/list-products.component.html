@@ -1,0 +1,31 @@
+<head>
+    <!-- Other meta tags, title, etc. -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<hr>
+<div class="cart">
+    <button class="add-product-btn" (click)="addNewProduct()">
+        <i class="fas fa-plus"></i> Add  <!-- Icon for add new product button -->
+    </button>
+    <div class="product-grid">
+        <div *ngFor="let product of products" class="product-item">
+            <div class="product-info">
+                <h2>{{ product.productName }}</h2>
+                <p>Image: <img [src]="product.image" alt="Product Image" /></p>
+                <p>Price: {{ product.price }}</p>
+                <p>Quantity: {{ product.quantity }}</p>
+                <p>Description: {{ product.description }}</p>
+                <p>Discount: {{ product.discount }}</p>
+                <!-- Display other product details as needed -->
+            </div>
+            <div class="product-actions">
+                <button (click)="deleteProduct(product.id)">
+                    <i class="fas fa-trash-alt"></i> <!-- Icon for delete button -->
+                </button>
+                <button (click)="editProduct(product.id)">
+                    <i class="fas fa-edit"></i> <!-- Icon for edit button -->
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

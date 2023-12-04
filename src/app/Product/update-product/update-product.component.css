@@ -1,0 +1,85 @@
+.cart-form {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 15px;
+    background-color: #e2c6c6;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    border: 2px solid #534949; /* Adding a border */
+  }
+
+  
+  .cart-form h2 {
+    text-align: center;
+    grid-column: 1 / -1;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', sans-serif; /* Change font family */
+    font-size: 30px; /* Change font size */
+    font-weight: bold; /* Make the text bold */
+    color: #1866b9; /* Change font color */
+  }
+  .cart-form label {
+    text-align: center;
+    grid-column: span 1;
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-style: italic;
+    color: #534949;
+  }
+
+  .cart-form input[type="text"],
+  .cart-form input[type="number"],
+  .cart-form textarea {
+    width: calc(100% - 24px);
+    padding: 14px;
+    margin-bottom: 10px;
+    border: 1px solid #7c7171;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+    transform: translateZ(0); /* Enhancing 3D effect */
+  }
+
+  .cart-form input[type="text"]:focus,
+  .cart-form input[type="number"]:focus,
+  .cart-form textarea:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  }
+
+  .cart-form textarea {
+    resize: vertical;
+    text-align: center;
+    grid-column: span 3;
+  }
+
+  .cart-form button[type="submit"],
+  .cart-form button[type="button"] {
+    padding: 16px 28px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    margin-top: 20px;
+    transform: translateZ(0); /* Enhancing 3D effect */
+  }
+
+  .cart-form .update-button {
+    background-color: #4caf50;
+    color: white;
+  }
+
+  .cart-form .cancel-button {
+    background-color: #f44336;
+    color: white;
+  }
+
+  .cart-form button[type="submit"]:hover,
+  .cart-form button[type="button"]:hover {
+    transform: translateY(-3px);
+  }
+  

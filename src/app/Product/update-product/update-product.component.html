@@ -1,0 +1,38 @@
+<hr>
+<form (submit)="updateProduct()" class="cart-form">
+  <h2>Edit Product</h2>
+  <label>
+    <b><i>Product Name:</i></b>
+    <input type="text" [(ngModel)]="product.productName" name="productName" required>
+  </label>
+  <label>
+    Product Number:
+    <input type="number" [(ngModel)]="product.productNumber" name="productNumber" required>
+  </label>
+  <!-- Other input fields for product details -->
+  <!-- For example: -->
+  <label>
+    Price:
+    <input type="number" [(ngModel)]="product.price" name="price" required>
+  </label>
+  <label>
+    Quantity:
+    <input type="number" [(ngModel)]="product.quantity" name="quantity" required>
+  </label>
+  <label>
+    Image URL:
+    <input type="text" [(ngModel)]="product.image" name="image">
+  </label>
+  <label>
+    Discount:
+    <input type="number" [(ngModel)]="product.discount" name="discount">
+  </label>
+  <label style="grid-column: span 3;">
+    Description:
+    <textarea [(ngModel)]="product.description" name="description"></textarea>
+  </label>
+  <div style="text-align: center; grid-column: span 3;">
+    <button type="submit" class="update-button">Update</button>&nbsp;&nbsp;
+    <button type="button" (click)="cancel()" class="cancel-button">Cancel</button>
+  </div>
+</form>

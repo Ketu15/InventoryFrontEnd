@@ -1,0 +1,96 @@
+.add-product-container {
+    max-width: 90%; /* Adjusting the max-width for responsiveness */
+    margin: 10vh auto; /* Center vertically and horizontally */
+    padding: 40px; /* Increased padding */
+    border: 5px solid #535050;
+    border-radius: 5px;
+    background-color: #e2d4d4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .add-product-container h2 {
+    text-align: center;
+    font-family: 'Time New Roman', sans-serif; /* Change the font family */
+    color: #007bff; /* Change the color */
+    margin-bottom: 40px;
+    font-size: 30px; /* Change the font size */
+    font-weight: bold; /* Make it bold */
+  }
+
+  .form-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* Increase the bottom margin */
+  }
+  
+  
+  .input-group label {
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .input-group textarea {
+    width: calc(100% - 16px);
+  }
+  
+  /* Center the Description field */
+  .input-group label[for="description"] {
+    grid-column: 1 / -1;
+  }
+  
+  input[type="text"],
+input[type="number"],
+textarea {
+  width: calc(100% - 24px); /* Increase the width */
+  padding: 12px; /* Increase padding for a larger size */
+  font-size: 18px; /* Larger font size */
+  border-radius: 10px;
+  border: 1px solid #0e0d0d;
+}
+
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .buttons button[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .buttons button[type="submit"]:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+  }
+  
+  .buttons button[type="button"] {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .buttons button[type="button"]:hover {
+    background-color: #da190b;
+    transform: translateY(-3px);
+  }

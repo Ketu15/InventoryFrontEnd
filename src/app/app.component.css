@@ -1,0 +1,13 @@
+/* Styles for changing background colors */
+.mat-toolbar {
+    background-color: #3f51b5; /* Change the background color of the toolbar */
+  }
+  
+  .mat-sidenav {
+    background-color: #e0e0e0; /* Change the background color of the sidebar */
+  }
+  
+  .mat-nav-list a {
+    color: #333; /* Change the text color of the sidebar links */
+  }
+  

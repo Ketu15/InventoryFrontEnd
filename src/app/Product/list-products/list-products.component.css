@@ -1,0 +1,130 @@
+/* Styles for the "Add New Product" button */
+button {
+    margin-bottom: 20px; /* Add space between the button and the list */
+    padding: 12px 24px; /* Adjusted padding for better visibility */
+    font-size: 18px; /* Increased font size */
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    /* 3D effect */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  
+  /* Styles for the list of products */
+  .product-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  .cart {
+    padding: 20px;
+    background-color: #333; /* Darker background color for the cart */
+    color: #fff; /* Font color */
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .product-item {
+    border-radius: 10px;
+    background-color: #444; /* Darker background for product items */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4); /* Adjusted shadow for contrast */
+    padding: 20px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    text-align: left;
+  }
+  
+  .product-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .product-info {
+    margin-bottom: 20px;
+  }
+  
+  .product-info h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    border-bottom: 2px solid #4caf50; /* Adding a border for product name */
+    padding-bottom: 8px; /* Padding for the border */
+  }
+  
+  .product-info p {
+    text-align: left;
+  }
+  
+  .product-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .product-actions button {
+    margin-right: 10px;
+    padding: 8px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #4caf50;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+  }
+  
+  .product-actions button:hover {
+    background-color: rgba(76, 175, 80, 0.2);
+  }
+  
+  /* Icon styles for buttons */
+  .product-actions button i {
+    font-size: 18px;
+    vertical-align: middle;
+  }
+  .add-product-btn {
+    /* Updated button styles for the darker theme */
+    margin-bottom: 20px;
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .add-product-btn:hover {
+    background-color: #388e3c; /* Darker hover color */
+  }
+  
+  .product-actions button {
+    /* Adjusted styles for product action buttons */
+    margin-right: 10px;
+    padding: 8px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #4caf50;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+  }
+  
+  .product-actions button:hover {
+    background-color: rgba(76, 175, 80, 0.2);
+  }
+
+/* Icon styles */
+.product-actions button i {
+    font-size: 18px;
+    vertical-align: middle;
+}
+

@@ -1,0 +1,46 @@
+<hr>
+<div class="add-product-container">
+  <h2 style="text-align: center;">Add New Product</h2> 
+  <form (submit)="addProduct()">
+    <div class="form-group">
+      <div class="input-group">
+        <label for="productName">Product Name</label>
+        <input type="text" placeholder="Enter Product Name" [(ngModel)]="newProduct.productName" name="productName" id="productName" required>
+      </div>
+      <div class="input-group">
+        <label for="productNumber">Product Number</label>
+        <input type="number" placeholder="Enter Product Number" [(ngModel)]="newProduct.productNumber" name="productNumber" id="productNumber" required>
+      </div>
+      <div class="input-group">
+        <label for="price">Price</label>
+        <input type="number" placeholder="Enter Price" [(ngModel)]="newProduct.price" name="price" id="price" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="input-group">
+        <label for="quantity">Quantity</label>
+        <input type="number" placeholder="Enter Quantity" [(ngModel)]="newProduct.quantity" name="quantity" id="quantity" required>
+      </div>
+      <div class="input-group">
+        <label for="image">Image URL</label>
+        <input type="text" placeholder="Enter Image URL" [(ngModel)]="newProduct.image" name="image" id="image">
+      </div>
+      <div class="input-group">
+        <label for="discount">Discount</label>
+        <input type="number" placeholder="Enter Discount" [(ngModel)]="newProduct.discount" name="discount" id="discount">
+      </div>
+     
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <label for="description">Description</label>
+            <textarea placeholder="Enter Description" [(ngModel)]="newProduct.description" name="description" id="description"></textarea>
+          </div>
+      <!-- Other input fields as needed -->
+    </div>
+    <div class="form-group buttons">
+      <button type="submit">Add Product</button> 
+      <button type="button" (click)="cancel()">Cancel</button>
+    </div>
+  </form>
+</div>
