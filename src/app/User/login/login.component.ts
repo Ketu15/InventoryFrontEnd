@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+
 import { LoginResponse } from 'src/app/Models/login-response.model';
 import { UserService } from '../user.service';
 import { LoginModel } from 'src/app/Models/Login.model';
+import { AuthService } from 'src/app/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +19,11 @@ export class LoginComponent {
 
   errorMessage: string = '';
 
-  constructor(private userService: UserService, private router: Router) {}
+  constructor(
+    private userService: UserService,
+    private router: Router,
+    private authService: AuthService // Inject AuthService
+  ) {}
 
   onLogin(): void {
     if (!this.isFormValid()) {
@@ -29,6 +35,7 @@ export class LoginComponent {
       (response: LoginResponse) => {
         // Handle successful login response
         console.log(response.token);
+        this.authService.login(); // Call login method from AuthService upon successful login
         this.router.navigate(['/dashboard']);
       },
       error => {
@@ -45,5 +52,4 @@ export class LoginComponent {
   isFormValid(): boolean {
     return this.loginModel.username.trim() !== '' && this.loginModel.password.trim() !== '';
   }
-  
 }

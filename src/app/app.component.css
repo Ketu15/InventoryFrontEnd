@@ -1,6 +1,6 @@
 /* Styles for changing background colors */
 .mat-toolbar {
-    background-color: #3f51b5; /* Change the background color of the toolbar */
+    background-color: #3498db; /* Change the background color of the toolbar */
   }
   
   .mat-sidenav {
@@ -10,4 +10,14 @@
   .mat-nav-list a {
     color: #333; /* Change the text color of the sidebar links */
   }
+  .app-title {
+    flex: 1;
+    text-align: center;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    color: #d2cece;
+  }
   
+  .profile-button {
+    margin-left: auto; /* Align the profile dropdown to the right */
+  }

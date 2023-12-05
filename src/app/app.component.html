@@ -1,22 +1,34 @@
+
 <mat-toolbar class="app-toolbar" color="primary">
-    <mat-toolbar-row>
-      <button mat-icon-button (click)="sidenav.toggle()">
-        <mat-icon>menu</mat-icon>
-      </button>
-      <span class="app-title">Inventory System</span>
-    </mat-toolbar-row>
-  </mat-toolbar>
+  <mat-toolbar-row>
+    <button mat-icon-button (click)="sidenav.toggle()" *ngIf="isLoggedIn">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="app-title">Inventory System</span>
+    <button mat-icon-button [matMenuTriggerFor]="profileMenu">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <mat-menu #profileMenu="matMenu">
+      <button mat-menu-item routerLink="/signup" *ngIf="!isLoggedIn">Signup</button>
+      <button mat-menu-item routerLink="/profile" *ngIf="isLoggedIn">Profile</button>
+      <button mat-menu-item>Help</button>
+      <button mat-menu-item (click)="logout()" *ngIf="isLoggedIn">Logout</button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
   
   <mat-sidenav-container>
     <mat-sidenav #sidenav class="app-sidenav" mode="side" opened>
       <mat-nav-list>
-        <a mat-list-item routerLink="/dashboard">Dashboard</a>
-        <a mat-list-item routerLink="/list-product">Product</a>
-        <a mat-list-item routerLink="/add-product">Add Product</a>
-        <a mat-list-item routerLink="/signup">Sign Up</a>
-        <a mat-list-item routerLink="/logout" (click)="logout()">Logout</a>
+        <a mat-list-item routerLink="/dashboard" *ngIf="isLoggedIn">Dashboard</a>
+        <a mat-list-item routerLink="/list-product" *ngIf="isLoggedIn">Product</a>
+        <a mat-list-item routerLink="/add-product" *ngIf="isLoggedIn">Add Product</a>
+        <!-- <a mat-list-item routerLink="/signup" *ngIf="!isLoggedIn">Sign Up</a>
+        <a mat-list-item routerLink="/login" *ngIf="!isLoggedIn">Login</a> -->
+        <!-- <a mat-list-item routerLink="/logout" (click)="logout()" *ngIf="isLoggedIn">Logout</a> -->
         <!-- Other sidebar links -->
       </mat-nav-list>
+      
     </mat-sidenav>
   
     <mat-sidenav-content>

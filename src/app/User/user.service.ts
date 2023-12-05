@@ -18,17 +18,9 @@ export class UserService {
     return this.http.post<any>(`${this.apiUrl}/signup`, user);
   }
 
-  // signIn(credentials: {username: string, password: string}): Observable<any> {
-  //   return this.http.post<any>(`${this.apiUrl}/signin`, credentials);
-  // }
-
-  // private apiUrl = 'http://localhost:7009/api/User'; // Replace with your backend API URL
-
-  // constructor(private http: HttpClient) {}
-
-  // signUp(user: User): Observable<User> {
-  //   return this.http.post<User>(`${this.apiUrl}/signup`, user);
-  // }
+  listUsers(): Observable<User[]> {
+    return this.http.get<User[]>(`${this.apiUrl}/all`);
+  }
 
   signIn(credentials: { username: string; password: string }): Observable<User> {
     return this.http.post<User>(`${this.apiUrl}/signin`, credentials);
